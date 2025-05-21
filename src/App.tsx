@@ -4,6 +4,7 @@ import { ThemeProvider, createTheme, CssBaseline, GlobalStyles } from '@mui/mate
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import MainPage from './components/MainPage';
 
 const theme = createTheme({
   palette: {
@@ -121,27 +122,7 @@ const App: React.FC = () => {
               path="/"
               element={
                 <PrivateRoute>
-                  <div style={{ 
-                    padding: '20px',
-                    fontFamily: 'Monolisa, monospace',
-                    color: '#4CAF50',
-                    minHeight: '100vh',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <div style={{ 
-                      border: '1px solid #4CAF50',
-                      padding: '20px',
-                      backgroundColor: '#2d2d2d',
-                      maxWidth: '600px',
-                      width: '100%'
-                    }}>
-                      <h1 style={{ margin: '0 0 20px 0' }}>Welcome to Terminal Forum</h1>
-                      <p>Type 'help' to see available commands</p>
-                    </div>
-                  </div>
+                  <MainPage />
                 </PrivateRoute>
               }
             />
